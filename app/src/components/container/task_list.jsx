@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import TaskComponent from "./pure/task";
 import { Task } from "../../models/task_class";
 import { LEVELS } from "../../models/levels.enum";
@@ -7,26 +7,26 @@ import { LEVELS } from "../../models/levels.enum";
 
 function TaskListComponent() {
   const defaultTask1 = new Task(
-    "Andres",
-    "Lavar la ropa",
+    "nombre",
+    "descripcion",
     false,
     LEVELS.NORMAL
   );
 
   // Estado del componente
-  /*const [tasks, setTasks] = useState(defaultTask1);
+  const [tasks, setTasks] = useState(defaultTask1);
   const [loading, setLoading] = useState(true);
 
   // Control del ciclo de vida del componente
   useEffect(() => {
     console.log("Task State has been modified");
-    setTimeout(() => {
+    
       setLoading(false);
-    }, 2000);
+    
     return () => {
       console.log("TaskList component is going to unmount...");
     };
-  }, [tasks]); */
+  }, [tasks]); 
 
   // data-mdb-perfect-scrollbar="true" -- hace scroll si hace muchas tareas y pasa de 400px
 
