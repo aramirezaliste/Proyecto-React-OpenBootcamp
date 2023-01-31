@@ -8,20 +8,23 @@ import { Task } from '../../../models/task_class'
 function TaskComponent({ task }) {
 
     return (
-        <div>
-            <h2>
-                Nombre: {task.name}
-            </h2>
-            <h3>
-                Descripcion: {task.description}
-            </h3>
-            <h4>
-                Importancia: {task.level}
-            </h4>
-            <h5>
-                Estado: {task.completed ? 'Tarea Completada' : 'Tarea Pendiente'}
-            </h5>
-        </div>
+        <tr className='fw-normal'>
+            <th>
+                <span className='ms-2'>{task.name}</span>
+            </th>
+            <td className='align-middle'>
+                <span>{task.description}</span>
+            </td>
+            <td className='align-middle'>
+                <span>{task.level}</span>
+            </td>
+            <td className='align-middle'>
+                <span>{task.completed}</span>
+            </td>
+        </tr>
+
+
+
     )
 }
 
